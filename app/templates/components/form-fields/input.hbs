@@ -1,0 +1,19 @@
+<label>
+  <span class="label-body">{{title}}</span>
+  <input
+    type={{type}}
+    class="{{if fieldErrors 'error'}}"
+    value={{get changeset property}}
+    onchange={{action (mut (get changeset property)) value="target.value"}}
+    oninput={{action (mut (get changeset property)) value="target.value"}}
+    autofocus={{autofocus}}
+    placeholder={{placeholder}}
+  >
+</label>
+{{#if fieldErrors}}
+  <ul class="Form-errors">
+    {{#each (get fieldErrors "validation") as |message|}}
+      <li>{{message}}</li>
+    {{/each}}
+  </ul>
+{{/if}}

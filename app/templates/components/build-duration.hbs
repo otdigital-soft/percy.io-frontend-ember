@@ -1,0 +1,12 @@
+{{fa-icon 'clock-o'}}
+{{#if build.isFailed}}
+  --
+{{else}}
+  {{#if build.isPending}}
+    --
+  {{else}}
+    {{#if build.durationHours}}{{build.durationHours}} h{{/if}}
+    {{#if build.durationMinutes}}{{build.durationMinutes}} min{{/if}}
+    {{#if build.durationSeconds}}{{build.durationSeconds}} sec{{/if}}
+  {{/if}}
+{{/if}}

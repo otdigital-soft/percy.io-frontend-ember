@@ -1,0 +1,54 @@
+.Card
+  @include Card
+
+.Card--selected
+  @include Card--selected
+
+.Card--linkable
+  @include Card--linkable
+
+.Card--white
+  @include Card--white
+
+.Card--extraPadded
+  @include Card--extraPadded
+
+.Card--expando
+  @include Card--expando
+
+.NamespaceCard
+  position: relative
+  width: 100%
+  border: 1px solid #ededed
+  border-bottom: 1px solid $lightergray
+  background: #ededed
+  padding: 10px
+  color: $gray
+
+  &.NamespaceCard--active
+    background: $lightergray
+    font-weight: bold
+    color: $darkgray
+
+    .NamespaceCard-arrow
+      display: block
+
+  &.NamespaceCard--linked
+    cursor: pointer
+
+    &:hover
+      background: $lightergray
+
+      .NamespaceCard-arrow
+        display: block
+
+  .NamespaceCard-arrow
+    display: none
+    position: absolute
+    top: 2px
+    right: -18px
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 18px solid $lightergray;

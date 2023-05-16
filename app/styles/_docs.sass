@@ -1,0 +1,76 @@
+.DocsContainer
+  // Default fontsize for docs is set to 15px, since the whole point is to read things.
+  font-size: $larger-font-size
+  line-height: 1.7
+
+  code span.dim
+    opacity: 0.4
+
+  h2
+    border-bottom: 1px solid #E1E1E1
+
+  img
+    // Make images on docs page downsize responsive.
+    max-width: 100%
+
+  .DocsNav
+    padding: 20px
+    background: $lightergray
+    box-shadow: rgba(0,0,0,0.14902) 0px 1px 1px 0px, rgba(0,0,0,0.09804) 0px 1px 2px 0px
+    border-radius: 3px
+
+    h1
+      margin-bottom: 0
+      margin-top: 2rem
+      font-size: 1.8rem
+      font-weight: bold
+      font-family: $fancy-font
+      border-bottom: 0
+
+    header:first-child
+      margin-top: 0
+
+    ul
+      margin-bottom: 0
+
+    ul li
+      list-style: none
+      margin-bottom: 0
+
+      a
+        text-decoration: none
+
+    .DocsNav-toggle
+      display: none
+
+@media (max-width: 750px)
+  .DocsContainer
+    .DocsNav
+      max-height: 100px
+      overflow: scroll
+      width: 100%
+
+      .DocsNav-toggle
+        display: block
+        float: right
+        cursor: pointer
+
+      &.DocsNav--expanded
+        max-height: inherit
+
+
+    .DocsBody
+      padding: 20px
+
+@media (min-width: 751px)
+  .DocsContainer
+    display: flex
+
+    .DocsNav
+      float: left
+      width: 20%
+
+    .DocsBody
+      padding: 40px
+      float: left
+      width: 80%

@@ -1,0 +1,95 @@
+.PricingSection,
+  // Reset font-size for homepage.
+  font-size: $smaller-font-size
+  padding-bottom: 20px
+
+  .PricingSection-bucket
+    position: relative
+    display: inline-block
+    vertical-align: top
+    width: 240px
+    border: $grayborder
+    background-color: white
+    margin-right: 20px
+    min-height: 381px
+    font-size: 110%
+    margin-bottom: 20px
+
+    &:last-of-type
+      margin-right: 0
+
+    &.PricingSection-bucket--active
+      background-color: #fffbdf
+
+    &.PricingSection-bucket--secondaryPlan
+      min-height: inherit
+      width: 100%
+
+      .PricingSection-title
+        &.PricingSection-title--small
+          margin-top: 0
+
+  .PricingSection-title
+    text-align: center
+    font-family: $fancy-font
+    font-size: 2rem
+    background: $beige
+    padding: 5px
+
+    &.PricingSection-title--small
+      background: $percy-beige
+      font-size: 1.3rem
+      font-weight: bold
+      margin-top: 3px
+      padding: 9px
+      box-shadow: 0 5px 10px #eaeaea
+      text-transform: uppercase
+
+  .PricingSection-bucketBody
+    padding: 20px
+
+  .PricingSection-price
+    text-align: center
+    font-size: 2rem
+    color: $darkgray
+    strong
+      font-size: 4rem
+      font-weight: normal
+      color: $default-text-color
+    span
+      vertical-align: 12px
+      font-size: 2rem
+      padding-right: 2px
+
+  .PricingSection-concurrency
+    padding: 20px 0 20px 0
+
+    input
+      margin-bottom: 0
+
+  .PricingSection-diffs
+    font-size: 20px
+    padding-top: 10px
+
+  .PricingSection-customized
+    font-size: 20px
+    padding-bottom: 20px
+
+  .PricingSection-comparison
+    padding: 30px
+    font-size: 1.5rem
+
+  .PricingSection-customizedInfo
+    padding-bottom: 20px
+
+  .PricingSection-infoItem
+    color: $gray
+
+    .fa-question-circle
+      color: $darkpurple
+
+@media (max-width: 550px)
+  .PricingSection
+    .PricingSection-bucket
+      margin-top: 20px !important
+      border: $grayborder !important

@@ -1,0 +1,45 @@
+.NavMenu
+  .NavMenu-item
+    display: inline-block
+
+    a
+      line-height: 4.3rem
+      float: left
+      display: block
+      padding: 10px 17px
+      letter-spacing: 0.1rem
+      font-family: $fancy-font
+      font-size: 13px
+      font-weight: 600
+
+  .NavMenu-item--right
+    float: right
+
+  .NavMenu-usage
+    vertical-align: top
+    text-align: center
+
+    a
+      width: 130px
+      font-size: 1.1rem
+      font-weight: lighter
+      line-height: 2rem
+      padding: 13px 18px 6px 18px
+      letter-spacing: 0.05rem
+      text-transform: none
+
+    .MeterBar
+      height: 12px
+      padding: 2px
+
+  .NavMenu-avatar
+    padding: 11px 11px
+    float: right
+
+
+@media (max-width: 750px)
+  .NavMenu
+    .NavMenu-item a
+      padding: 10px 5px
+    .NavMenu-usage
+      display: none

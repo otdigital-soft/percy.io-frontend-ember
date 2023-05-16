@@ -1,0 +1,26 @@
+.container
+  &.Footer
+    border-top: $grayborder
+    text-align: center
+    line-height: 6rem
+    padding: 12px
+
+    .Footer-copyright
+      opacity: 0.5
+
+    a, .Footer-item
+      display: inline-block
+      padding: 10px
+
+
+    .Footer-logo
+      width: 60px
+      margin: 12px
+      display: inline-block
+      float: right
+
+@media (max-width: 750px)
+  .container
+    &.Footer
+      a, .Footer-item
+        padding: 10px 2px 0 2px

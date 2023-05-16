@@ -1,0 +1,37 @@
+<div class="OrganizationsSwitcherNav-item" {{action "toggleSwitcher"}}>
+  {{#if currentOrganization}}
+    {{currentOrganization.name}}
+  {{else}}
+    Jump to organization
+  {{/if}}
+  {{fa-icon "chevron-down"}}
+</div>
+{{#if isExpanded}}
+  <div class="OrganizationsSwitcherNav-pageClickOverlay" {{action "hideSwitcher"}}></div>
+  <div class="OrganizationsSwitcherNav-arrow">{{fa-icon "caret-up"}}</div>
+  <div class="OrganizationsSwitcherNav-switcher" {{action "hideSwitcher"}}>
+    {{!--
+    {{#if currentOrganization}}
+      {{#link-to "organizations.organization.settings" currentOrganization.slug classNames="Button Button--onDark Button--withLeftIcon"}}
+        {{fa-icon "cog fa--left"}} Settings
+      {{/link-to}}
+    {{/if}}
+    --}}
+    {{#link-to "organizations.new" classNames="Button Button--onDark Button--withLeftIcon"}}
+      {{fa-icon "plus-circle fa--left"}} Create new organization
+    {{/link-to}}
+    {{#if currentUser.organizations.isPending}}
+      {{loading-page}}
+    {{else}}
+      <ul>
+        {{#each currentUser.organizations as |org|}}
+          <li>
+            {{#link-to "organization.index" org.slug classNames="OrganizationsSwitcherNav-item"}}
+              {{org.name}}
+            {{/link-to}}
+          </li>
+        {{/each}}
+      </ul>
+    {{/if}}
+  </div>
+{{/if}}

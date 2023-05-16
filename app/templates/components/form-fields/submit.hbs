@@ -1,0 +1,10 @@
+<input
+  type="submit"
+  class="{{classes}}"
+  value="{{value}}"
+  disabled={{disabled}}
+  onclick={{action "perform"}}
+>
+{{#if showSavingIndicator}}
+  {{saving-indicator isSaving=isSaving isSaveSuccessful=isSaveSuccessful}}
+{{/if}}
